@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## This is the React Calculator Project, for the Microverse Full Time Program.
+Build by [Jorge Fernando Rincón Figueroa](github.com/jofer86)
+
 ## Available Scripts
 
 In the project directory, you can run:
