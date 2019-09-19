@@ -1,42 +1,29 @@
 import React from 'react';
+import Button from './Button';
 
-const ButtonPanel = (props) => {
-  const { button } = props;
-  const panel = (
-    <div>
-      <div>
-        {button[0]}
-        {button[1]}
-        {button[2]}
-        {button[3]}
+const ButtonPanel = () => {
+  const buttons = [[{ name: 'AC', id: 1 }, { name: '+/-', id: 2 }, { name: '%', id: 3 }, { name: '+', id: 4 }],
+    [{ name: '7', id: 5 }, { name: '8', id: 6 }, { name: '9', id: 7 }, { name: 'X', id: 8 }],
+    [{ name: '4', id: 9 }, { name: '5', id: 10 }, { name: '6', id: 11 }, { name: '-', id: 12 }],
+    [{ name: '1', id: 13 }, { name: '2', id: 14 }, { name: '3', id: 15 }, { name: '+', id: 16 }],
+    [{ name: '0', id: 17 }, { name: '.', id: 18 }, { name: '=', id: 19 }],
+  ];
+  const divKey = [0, 1, 2, 3, 4, 5];
+  const buttonLayout = () => {
+    const layout = buttons.map(((row, index) => (
+      <div key={divKey[index]}>
+        {row.map((button) => (
+          <Button
+            key={button.id}
+            name={button.name}
+          />
+        ))}
       </div>
-      <div>
-        {button[4]}
-        {button[5]}
-        {button[6]}
-        {button[7]}
-      </div>
-      <div>
-        {button[8]}
-        {button[9]}
-        {button[10]}
-        {button[11]}
-      </div>
-      <div>
-        {button[12]}
-        {button[13]}
-        {button[14]}
-        {button[15]}
-      </div>
-      <div>
-        {button[16]}
-        {button[17]}
-        {button[18]}
-        {button[19]}
-      </div>
-    </div>
-  );
-  return panel;
+    )));
+    return layout;
+  };
+
+  return buttonLayout();
 };
 
 export default ButtonPanel;
