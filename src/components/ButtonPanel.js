@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import './style/ButtonPanel.css';
 
 const ButtonPanel = () => {
   const buttons = [[{ name: 'AC', id: 1 }, { name: '+/-', id: 2 }, { name: '%', id: 3 }, { name: '+', id: 4 }],
@@ -8,14 +9,15 @@ const ButtonPanel = () => {
     [{ name: '1', id: 13 }, { name: '2', id: 14 }, { name: '3', id: 15 }, { name: '+', id: 16 }],
     [{ name: '0', id: 17 }, { name: '.', id: 18 }, { name: '=', id: 19 }],
   ];
-  const divKey = [0, 1, 2, 3, 4, 5];
+  const divKey = [1, 2, 3, 4, 5];
   const buttonLayout = () => {
     const layout = buttons.map(((row, index) => (
-      <div key={divKey[index]}>
+      <div className="row" key={divKey[index]}>
         {row.map((button) => (
           <Button
             key={button.id}
             name={button.name}
+            btnStyler={button.id}
           />
         ))}
       </div>
