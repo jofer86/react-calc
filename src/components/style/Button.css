@@ -1,0 +1,20 @@
+.Button,
+.wide,
+.orange {
+  height: 96px;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: 2px solid #d1d1d1;
+}
+
+.wide{ 
+  width: 50.6%;
+}
+
+.orange{
+  background-color: #f5913e;
+}
+
