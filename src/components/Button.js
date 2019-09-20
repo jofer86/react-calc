@@ -6,9 +6,9 @@ const Button = (props) => {
   const classHandler = (id) => {
     let output = null;
     if (id === 17) {
-      output = 'Button wide';
+      output = 'wide';
     } else if (id === 4 || id === 8 || id === 12 || id === 16 || id === 19) {
-      output = 'Button orange';
+      output = 'orange';
     } else {
       output = 'Button';
     }
