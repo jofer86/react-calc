@@ -13,13 +13,22 @@ const ButtonPanel = () => {
   const buttonLayout = () => {
     const layout = buttons.map(((row, index) => (
       <div className="row" key={divKey[index]}>
-        {row.map((button) => (
-          <Button
-            key={button.id}
-            name={button.name}
-            btnStyler={button.id}
-          />
-        ))}
+        {row.map((button) => {
+          if (button.id === 17) {
+            return (
+              <Button
+                key={button.id}
+                name={button.name}
+                wide
+              />
+            );
+          } return (
+            <Button
+              key={button.id}
+              name={button.name}
+            />
+          );
+        })}
       </div>
     )));
     return layout;

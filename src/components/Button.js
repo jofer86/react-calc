@@ -15,9 +15,13 @@ const Button = (props) => {
     return output;
   };
 
-  const { name, btnStyler } = props;
-  const button = <div className={classHandler(btnStyler)}>{name}</div>;
+  const { name, wide, color } = props;
+  const button = <div className={wide ? 'wide' : 'Button'}>{name}</div>;
   return button;
+};
+
+Button.defaultProps = {
+  wide: false,
 };
 
 Button.propTypes = {
