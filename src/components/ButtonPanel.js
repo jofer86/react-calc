@@ -19,7 +19,7 @@ const ButtonPanel = () => {
       <div className="row" key={divKey[index]}>
         {row.map((button) => (
           <Button
-            key={button.id}n
+            key={button.id}
             name={button.name}
             wide={button.wide}
             color={button.color}
