@@ -14,6 +14,10 @@ const operate = (numberOne, numberTwo, operation) => {
   const num2 = Big(numberTwo);
   const oper = operations[operation];
 
+  if (numberTwo === 0 && operation === '÷') {
+    return 'Error';
+  }
+
   return num1[oper](num2).toString();
 };
 

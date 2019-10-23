@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import './style/ButtonPanel.css';
+import '../style/ButtonPanel.css';
 
 const ButtonPanel = () => {
   const base = '#e0e0e0';
