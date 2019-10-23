@@ -23,6 +23,7 @@
     "rules": {
       "react/jsx-filename-extension": 0,
       "import/no-unresolved": 0,
+      "import/extensions": "off",
       "arrow-parens":"off",
       "radix":"off",
       "no-unused-vars":"off"
