@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 import '../style/ButtonPanel.css';
 
-const ButtonPanel = () => {
+const ButtonPanel = (props) => {
   const base = '#e0e0e0';
   const buttons = [
     [{ name: 'AC', id: 1, color: base }, { name: '+/-', id: 2, color: base }, { name: '%', id: 3, color: base }, { name: '÷', id: 4 }],
@@ -23,6 +23,7 @@ const ButtonPanel = () => {
             name={button.name}
             wide={button.wide}
             color={button.color}
+            click={() => props.click(button.name)}
           />
         ))}
       </div>
