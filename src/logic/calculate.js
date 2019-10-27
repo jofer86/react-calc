@@ -1,10 +1,16 @@
 import operate from './operate';
 
 const Calculate = (obj, buttonName) => {
-  const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'AC', '.'].includes(buttonName);
+  const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'].includes(buttonName);
   const operations = ['+', '-', 'x', '%', '+/-', '÷'].includes(buttonName);
   const equals = ['='].includes(buttonName);
   let { next, total, operation } = obj;
+
+  if (buttonName === 'AC') {
+    total = null;
+    next = null;
+    operation = null;
+  }
 
   if (equals) {
     total = operate(total, next, operation);
@@ -21,6 +27,10 @@ const Calculate = (obj, buttonName) => {
 
   if (operations && next && buttonName === '+/-') {
     next = (parseInt(next) * -1).toString();
+  }
+
+  if (operations && total && buttonName === '+/-') {
+    next = (parseInt(total) * -1).toString();
   }
 
   if (operations && next && total && operation) {

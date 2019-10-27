@@ -4,7 +4,7 @@ import '../style/Button.css';
 
 const Button = (props) => {
   const { name, wide, color } = props;
-  const width = wide ? '50.7%' : '25%';
+  const width = wide ? '50%' : '25%';
   const button = (
     <button
       type="button"
