@@ -57,6 +57,7 @@ const Calculate = (obj, buttonName) => {
     return { next, total, operation };
   }
 
+
   // eslint-disable-next-line consistent-return
   return { next, total, operation };
 };
