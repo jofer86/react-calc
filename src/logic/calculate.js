@@ -5,6 +5,7 @@ const Calculate = (obj, buttonName) => {
   const operations = ['+', '-', 'x', '%', '+/-', '÷'].includes(buttonName);
   const equals = ['='].includes(buttonName);
   let { next, total, operation } = obj;
+  
 
   if (buttonName === 'AC') {
     total = null;
