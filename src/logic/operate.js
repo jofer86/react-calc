@@ -11,8 +11,8 @@ const operate = (numberOne, numberTwo, operation) => {
     x: 'times',
   };
 
-  const num1 = Big(parseInt(numberOne));
-  const num2 = Big(parseInt(numberTwo));
+  const num1 = Big(parseFloat(numberOne));
+  const num2 = Big(parseFloat(numberTwo));
   const oper = operations[operation];
 
 
