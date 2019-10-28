@@ -40,6 +40,12 @@ const Calculate = (obj, buttonName) => {
     return { next, total, operation };
   }
 
+  if (operations && total && !next && !operation && buttonName === '+/-') {
+    next = (parseFloat(total) * -1).toString();
+    total = null;
+    return { next, total, operation };
+  }
+
   if (operations && total && buttonName === '+/-') {
     next = (parseFloat(total) * -1).toString();
     return { next, total, operation };
