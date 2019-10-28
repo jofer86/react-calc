@@ -20,6 +20,13 @@ const Calculate = (obj, buttonName) => {
     return { next, total, operation };
   }
 
+  if (numbers && total && !next && !operation) {
+    next = buttonName;
+    total = null;
+    operation = null;
+    return { next, total, operation };
+  }
+
   if (numbers) {
     if (total === null && next === null && buttonName === '0') {
       return { next, total, operation };
@@ -29,12 +36,12 @@ const Calculate = (obj, buttonName) => {
   }
 
   if (operations && next && buttonName === '+/-') {
-    next = (parseInt(next) * -1).toString();
+    next = (parseFloat(next) * -1).toString();
     return { next, total, operation };
   }
 
   if (operations && total && buttonName === '+/-') {
-    next = (parseInt(total) * -1).toString();
+    next = (parseFloat(total) * -1).toString();
     return { next, total, operation };
   }
 
