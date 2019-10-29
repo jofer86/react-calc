@@ -13,7 +13,7 @@ const Calculate = (obj, buttonName) => {
     return { next, total, operation };
   }
 
-  if (equals) {
+  if (equals && total && next && operation) {
     total = operate(total, next, operation);
     next = null;
     operation = null;
