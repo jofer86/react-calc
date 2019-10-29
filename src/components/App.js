@@ -39,7 +39,6 @@ class App extends Component {
       <div className="App">
         <Display
           results={show}
-          state={console.log(this.state)}
         />
         <ButtonPanel
           click={this.handleClick}
