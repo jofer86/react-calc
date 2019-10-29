@@ -8,6 +8,8 @@
   align-items: center;
   color: black;
   border: 2px solid #d1d1d1;
+  font-family: 'Righteous', cursive;
+  font-size: 20px;
 }
 
 .wide{ 
